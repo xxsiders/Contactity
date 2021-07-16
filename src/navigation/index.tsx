@@ -3,13 +3,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 import { RootStackParamList } from '../../types';
+import LoadingView from '../components/LoadingView';
 import Colors from '../constants/Colors';
 import { useAuth } from '../hooks/useAuth';
+import Contacts from '../screens/Contacts';
 import Login from '../screens/Login';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import LinkingConfiguration from './LinkingConfiguration';
-import LoadingView from '../components/LoadingView'
 import Register from '../screens/Register';
+import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -31,7 +32,10 @@ function RootNavigator() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
       </> :
-        <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+        <>
+          <Stack.Screen name="Contacts" component={Contacts} />
+          <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+        </>
       }
     </Stack.Navigator>
 
