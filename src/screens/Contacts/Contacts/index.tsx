@@ -23,7 +23,7 @@ export default function index(props: any) {
             <View style={styles.contentContainer}>
                 <Text style={styles.title}>Contact List</Text>
                 <FlatList
-                    onEndReachedThreshold={0}
+                    onEndReachedThreshold={0.3}
                     onEndReached={() => props.increasePage()}
                     keyExtractor={(item) => item.id}
                     contentContainerStyle={styles.scrollContainer}
