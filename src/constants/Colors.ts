@@ -1,8 +1,7 @@
-import { ExtendedTheme } from "@react-navigation/native";
 
 const tintLight = '#6200ee';
 
-const light: ExtendedTheme = {
+const light: any = {
   dark: false,
   colors: {
     text: '#000',
@@ -18,7 +17,7 @@ const light: ExtendedTheme = {
   }
 }
 
-const dark: ExtendedTheme = {
+const dark: any = {
   dark: true,
   colors: {
     text: '#000',
