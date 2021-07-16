@@ -13,7 +13,7 @@ export default function index(props: any) {
                 style={styles.scrollContainer} showsVerticalScrollIndicator={false} extraScrollHeight={100} keyboardShouldPersistTaps='handled' enableOnAndroid={true} enableAutomaticScroll>
                 <ScrollView keyboardShouldPersistTaps='handled'>
                     <View style={styles.contentContainer}>
-                        <Text style={styles.title}>Sign in</Text>
+                        <Text style={styles.title}>Sign up</Text>
                         <TextInput
                             autoCapitalize='none'
                             onChangeText={props.handleChange('username')}
@@ -29,10 +29,7 @@ export default function index(props: any) {
                         {props.touched.password ? <ErrorText>{props.errors.password}</ErrorText> : <ErrorText />}
 
                         <TouchableOpacity onPress={props.handleSubmit} style={styles.loginContainer}>
-                            {props.loading ? <ActivityIndicator color='#fff' /> : <Text style={styles.loginText}>Sign in</Text>}
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => props.navigation.navigate('Register')} style={styles.registerContainer}>
-                            <Text style={styles.registerText}>Sign Up</Text>
+                            {props.loading ? <ActivityIndicator color='#fff' /> : <Text style={styles.loginText}>Sign up</Text>}
                         </TouchableOpacity>
                     </View>
                 </ScrollView>

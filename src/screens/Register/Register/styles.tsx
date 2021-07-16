@@ -42,17 +42,6 @@ const styles = () => {
             fontSize: Layout.fonts.h4,
             color: colors.white,
         },
-        registerText: {
-            fontFamily: Layout.fontFamily.InterMedium,
-            fontSize: Layout.fonts.h4,
-            color: colors.tint,
-            padding: 4
-        },
-        registerContainer: {
-            marginTop: 12,
-            alignSelf: 'center'
-        }
-
     })
 }
 
