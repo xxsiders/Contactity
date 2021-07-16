@@ -20,8 +20,8 @@ const light: any = {
 const dark: any = {
   dark: true,
   colors: {
-    text: '#000',
-    background: '#fff',
+    text: '#fff',
+    background: '#000',
     tint: tintLight,
     tabIconDefault: '#ccc',
     tabIconSelected: tintLight,
